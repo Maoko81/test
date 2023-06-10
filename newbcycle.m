@@ -3,16 +3,16 @@ clc
 clear all
 close all
 
-f = fred
+f = fred;
 startdate = '1995-01-01';
 enddate = '2022-01-01';
 
 
 %%
-realGDP_JPN = fetch(f,'JPNRGDPEXP',startdate,enddate)      %Real Gross Domestic Product
+realGDP_JPN = fetch(f,'JPNRGDPEXP',startdate,enddate);      %Real Gross Domestic Product
 JPN = realGDP_JPN.Data(:,2);
 
-realGDP_ESP = fetch(f,'CLVMNACSCAB1GQES',startdate,enddate)      %Real Gross Domestic Product
+realGDP_ESP = fetch(f,'CLVMNACSCAB1GQES',startdate,enddate);      %Real Gross Domestic Product
 year = realGDP_ESP.Data(:,1);
 ESP = realGDP_ESP.Data(:,2);
 % load y.mat
